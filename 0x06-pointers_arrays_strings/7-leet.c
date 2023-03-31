@@ -1,29 +1,28 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * leet - main function
- * @a: arg
- * Return: a
+ * leet - encodes a string in 1337
+ * @s: string to be encoded
+ *
+ * Return: the resulting string;
  */
-
-char *leet(char *a)
+char *leet(char *s)
 {
-	int i;
-	int j;
-	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
 
-	for (i = 0; a[i] != '\0'; i++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (a[i] == data1[j])
+			if (s[i] == a[j])
 			{
-				a[i] = datarot[j];
-				break;
+				s[i] = b[j];
 			}
 		}
 	}
-	return (a);
+
+	return (s);
 }
