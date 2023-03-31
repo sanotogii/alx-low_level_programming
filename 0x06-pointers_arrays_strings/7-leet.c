@@ -3,8 +3,8 @@
 
 /**
  * leet - main function
- * @s: arg
- * Return: *s
+ * @a: arg
+ * Return: a
  */
 
 char *leet(char *a)
