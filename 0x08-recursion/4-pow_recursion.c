@@ -1,7 +1,7 @@
 include "main.h"
 
 /**
- * _pow_recursion - function that returns the value of x raised to the power of y
+ * _pow_recursion - function that returns x^y
  * @x: arg1
  * @y: arg2
  * Return: rec
@@ -13,6 +13,6 @@ int _pow_recursion(int x, int y)
 		return (-1);
 	else if (y == 0)
 		return (1);
-	else 
+	else
 		return (x * _pow_recursion(x, y - 1));
 }
