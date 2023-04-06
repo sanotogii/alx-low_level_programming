@@ -17,7 +17,7 @@ int is_prime_number(int n)
 
 
 /**
- * actual_prime - the 
+ * actual_prime - the
  * @n: arg1
  * @i: arg2
  * Return: int
