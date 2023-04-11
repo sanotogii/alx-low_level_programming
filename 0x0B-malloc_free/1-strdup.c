@@ -2,23 +2,6 @@
 #include <stdlib.h>
 #include "main.h"
 
-/**
- * _strlen - count number of string
- * @s: arg
- * Return: len
- **/
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
 
 /**
  * _strdup -  function that creates an array of chars
@@ -28,13 +11,24 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	char *arr = malloc(_strlen(str) + 1);
+	char *arr;
+	int len;
 	int i;
+
+	if (str == NULL)
+		return (NULL);
+	
+	len = 0;
+
+	while (str[len] != '\0')
+		len++;
+	
+	arr = malloc(sizeof(char)*(len + 1));
 
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i <= _strlen(str); i++)
+	for (i = 0; i <= len; i++)
 		arr[i] = str[i];
 
 	return (arr);
