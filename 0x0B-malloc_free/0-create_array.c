@@ -2,11 +2,11 @@
 #include<stdlib.h>
 #include "main.h"
 
-/*
- * create_array - main function
- * @size: size of arr
+/**
+ * create_array - function that creat array
+ * @size: size
  * @c: char
- * Return: char
+ * Return: arr
  **/
 
 char *create_array(unsigned int size, char c)
