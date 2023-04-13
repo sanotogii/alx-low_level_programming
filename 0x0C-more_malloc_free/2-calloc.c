@@ -1,5 +1,26 @@
 #include <stdlib.h>
 #include "main.h"
+
+/**
+ * _memset - main
+ * @s: arg1
+ * @b: arg2
+ * @n: arg3
+ * Return: ptr
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
+
 /**
  * _calloc - main
  * @nmemb: arg1
@@ -11,16 +32,11 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr = malloc(nmemb * size);
-	unsigned int i;
-	char *cptr;
 
 	if (ptr == NULL)
 		return (NULL);
 
-	cptr = ptr;
-
-	for (i = 0; i < nmemb * size; i++)
-		cptr[i] = 0;
+	_memset(ptr, 0, nmemb * size);
 
 	return (ptr);
 }
