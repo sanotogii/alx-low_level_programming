@@ -1,7 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
+/**
+ * string_nconcat - main
+ * @s1: arg1
+ * @s2: arg2
+ * @n: arg3
+ * Return: char
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
