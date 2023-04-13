@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 int _strlen(char *s)
 {
@@ -11,10 +12,6 @@ int _strlen(char *s)
 	return (i);
 }
 
-void _puts(char *s)
-{
-	write(1, s, _strlen(s));
-}
 
 int _isdigit(char c)
 {
