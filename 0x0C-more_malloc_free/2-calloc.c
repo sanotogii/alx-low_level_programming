@@ -6,7 +6,7 @@
  * @s: arg1
  * @b: arg2
  * @n: arg3
- * Return: ptr
+ * Return: char
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -31,16 +31,16 @@ char *_memset(char *s, char b, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	char *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	ptr = malloc(size * nmemb);
+	p = malloc(size * nmemb);
 
-	if (ptr == NULL)
+	if (p == NULL)
 		return (NULL);
 
-	_memset(ptr, 0, nmemb * size);
+	_memset(p, 0, nmemb * size);
 
-	return (ptr);
+	return (p);
 }
