@@ -1,5 +1,5 @@
-#ifdef TASK1
-#define TASK1
+#ifdef TASK0
+#define TASK0
 
 #define SIZE 1024
 
