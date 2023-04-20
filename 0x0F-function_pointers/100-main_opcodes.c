@@ -2,51 +2,46 @@
 #include <stdlib.h>
 
 /**
- * p_opcodes - main
- * @s: aa
- * @len: len
- * Return: void
- */
-
-void p_opcodes(unsigned char *s, int len)
-{
-	int i = 0;
-
-	while (i < len)
-	{
-		printf("%02x ", s[i]);
-		i++;
-	}
-	printf("\n");
-}
-
-/**
  * main - main
  * @argc: arg
  * @argv: arg
  * Return: int
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-		if (argc != 2)
+	int s, i;
+	char *ar;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+
+	s = atoi(argv[1]);
+
+	if (s < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	ar = (char *)main;
+
+	i = 0;
+
+	while (i < s)
+	{
+		if (i == (s - 1))
 		{
-			printf("Error\n");
-			return (1);
+			printf("%02hhx\n", ar[i]);
+			break;
 		}
 
-		int len = atoi(argv[1]);
-
-		if (len < 0)
-		{
-			printf("Error\n");
-			return (2);
-		}
-
-		unsigned char *s = (unsigned char *)main;
-
-		p_opcodes(s, len);
-
-		return (0);
+		printf("%02hhx ", ar[i]);
+		i++;
+	}
+	return (0);
 
 }
