@@ -1,5 +1,5 @@
 #ifndef HDR
-#ifndef HDR
+#define HDR
 
 /**
  * struct op - Struct op
