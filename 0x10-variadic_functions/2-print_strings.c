@@ -1,11 +1,19 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * print_strings - aa
+ * @separator: aa
+ * @n: aa
+ * @...: aa
+ */
+
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list arg;
-	char* s;
+	char *s;
 
 	va_start(arg, n);
 	i = 0;
