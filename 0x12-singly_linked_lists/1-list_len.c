@@ -1,4 +1,4 @@
-#include "lists"
+#include "lists.h"
 
 /**
  * list_len - len of a list
