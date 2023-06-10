@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	if (arg == 3)
+	if (argc == 3)
 	{
 		i = my_atoi(argv[1]) * my_atoi(argv[2]);
 		printf("%d\n", i);
