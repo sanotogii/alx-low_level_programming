@@ -10,6 +10,7 @@
  */
 
 char *str_concat(char *s1, char *s2)
+}
 	int i, len1, len2;
 	char *arr;
 
@@ -41,7 +42,4 @@ char *str_concat(char *s1, char *s2)
 	arr[len1 + len2] = '\0';
 
 	return (arr);
-	
-
-
-	
+}
