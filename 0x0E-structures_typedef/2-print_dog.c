@@ -24,5 +24,7 @@ void print_dog(struct dog *d)
 		else
 			printf("(nil)\n");
 	}
+	if (d == NULL)
+		return;
 
 }
