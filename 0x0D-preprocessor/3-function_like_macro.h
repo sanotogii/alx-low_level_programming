@@ -3,5 +3,5 @@
 
 #define ABS(X) X
 #if X < 0
-	#define ABS(x) (-1)*(X)
+	X = (-1)*(X)
 #endif
