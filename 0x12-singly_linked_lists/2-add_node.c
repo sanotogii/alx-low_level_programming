@@ -33,14 +33,14 @@ list_t *add_node(list_t **head, const char *str)
 	if (head && str)
 	{
 		l = malloc(sizeof(list_t));
-		if (1 == NULL)
+		if (l == NULL)
 			return (NULL);
 		l->str = strdup(str);
 		l->len = _strlen(str);
 		l->next = *head;
 
 		*head = l;
-		return (1);
+		return (l);
 	}
 	return (0);
 }
