@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int nbr;
 	const char *p = b;
 
-	if (b)
+	if (!b)
 		return (0);
 	nbr = 0;
 
@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		if (*p != '0' && *p != '1')
 			return (0);
 		nbr = (2 * nbr) + (*p - '0');
-		p++
+		p++;
 	}
 	return (nbr);
 
