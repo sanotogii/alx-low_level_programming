@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * print_binary - unsigned to binary
  * @n: number
  * Return: void

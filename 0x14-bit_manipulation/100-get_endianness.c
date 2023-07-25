@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * get_endianness - function
  * Return: void
  */
