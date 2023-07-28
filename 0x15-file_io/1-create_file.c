@@ -9,7 +9,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int file;
+	int file, f;
 	ssize_t c;
 	size_t len = 0;
 
@@ -30,8 +30,13 @@ int create_file(const char *filename, char *text_content)
 	file = open(filename, O_TRUNC | O_WRONLY);
 
 	if (file == -1)
+	{
+		f = creat(filename, 0600);
+		if (f == -1)
+			return (-1);
 
-		return (-1);
+		return (-1)
+	}
 
 	c = write(file, text_content, len);
 
