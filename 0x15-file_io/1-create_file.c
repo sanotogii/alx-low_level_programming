@@ -9,7 +9,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int file, f;
+	int file, ef;
 	ssize_t c;
 	size_t len = 0;
 
@@ -17,7 +17,12 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content == NULL)
+	{
+		ef = creat(filename, 0600);
+		if (ef == -1)
+			return (-1);
 		return (-1);
+	}
 
 	while (*text_content != '\0')
 	{
@@ -31,10 +36,6 @@ int create_file(const char *filename, char *text_content)
 
 	if (file == -1)
 	{
-		f = creat(filename, 0600);
-		if (f == -1)
-			return (-1);
-
 		return (-1);
 	}
 
