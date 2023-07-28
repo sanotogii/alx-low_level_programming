@@ -41,7 +41,6 @@ void display_elf(const char *filename)
 
 int main(int argc, char *argv[])
 {
-	const char *filename;
 
 	if (argc != 2)
 	{
@@ -49,8 +48,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	filename = argv[1];
-	display_elf(filename);
+	display_elf(argv[1]);
 
 	return(0);
 }
