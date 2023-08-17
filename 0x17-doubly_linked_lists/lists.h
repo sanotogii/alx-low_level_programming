@@ -1,5 +1,6 @@
-#ifndef main
-#define main
+#ifndef _LIST_
+#define _LIST_
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
