@@ -13,6 +13,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (!ht || !key || key[0] == '\0')
 		return (0);
+	if (index >= ht->size)
+		return (NULL);
 	while (current)
 	{
 		if (strcmp(current->key, key) == 0)
