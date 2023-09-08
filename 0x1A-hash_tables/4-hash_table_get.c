@@ -8,9 +8,11 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long index = hash_djb2(key);
-	hash_node_t *current = ht[index];
+	unsigned long int index = key_index((const unsigned char *)key, ht->size);
+	hash_node_t *current = ht->array[index];
 
+	if (!ht || !key || key[0] == '\0')
+		return (0);
 	while (current)
 	{
 		if (strcmp(current->key, key) == 0)
