@@ -1,5 +1,12 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_set - Adds or updates a key-value pair in a hash table.
+ * @ht: The hash table.
+ * @key: The key (non-empty).
+ * @value: The value (can be empty).
+ * Return: 1 on success, 0 on failure.
+ */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
