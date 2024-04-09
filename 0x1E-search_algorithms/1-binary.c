@@ -2,15 +2,14 @@
 #include <stdlib.h>
 
 /**
- * Function: binary_search
- * Performs a binary search on a sorted integer array 
+ * binary_search - Performs a binary search on a sorted integer array
  * to find the index of a specific value.
  *
- * array: Pointer to the sorted integer array.
- * size: Size of the array.
- * value: The integer value to be searched for.
+ * @array: Pointer to the sorted integer array.
+ * @size: Size of the array.
+ * @value: The integer value to be searched for.
  *
- * returns: Index of the value if found, otherwise -1.
+ * Return: Index of the value if found, otherwise -1.
  */
 
 
